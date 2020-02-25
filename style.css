@@ -50,12 +50,14 @@ nav a:hover {
 }
 
 img {
-  width: 70px;
+  width: 700px;
+  background: none;
 }
 
 .header {
   position: absolute;
-  top: 46%;
+  top: 33%;
+  /* top: 46%; */
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -68,7 +70,8 @@ img {
 
 .tagline {
   position: absolute;
-  top: 58%;
+  top: 46%; 
+  /* top: 58%; */
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -83,7 +86,8 @@ img {
 
  .button {
     position: absolute;
-    top: 70%;
+    top: 58%;
+    /* top: 70%; */
     left: 50%;
     transform: translate(-50%, -50%);
 } 

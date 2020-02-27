@@ -194,8 +194,7 @@ body {
 
 .header {
   position: absolute;
-  top: 33%;
-  /* top: 46%; */
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -208,8 +207,7 @@ body {
 
 .tagline {
   position: absolute;
-  top: 46%; 
-  /* top: 58%; */
+  top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -224,8 +222,7 @@ body {
 
  .button {
     position: absolute;
-    top: 58%;
-    /* top: 70%; */
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
 } 

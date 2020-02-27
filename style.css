@@ -15,44 +15,182 @@ body {
   display: table;
 }
 
-nav {
-  text-align: center;
-  margin-top: 40px;
+/* navbar starts here */
+
+.nav { 
+  width: 100%;
+  height: 80px;
+  top: 0;
+  position: fixed;
+  z-index: 2;
 }
 
-nav li {
-  list-style: none;
-  display: inline-block;
+.nav.scrolled {
+  transition: background-color 500ms linear;
 }
 
-nav a {
+.nav #brand {
+  float: left;
+  display: block;
+  margin-left: 30px;
+  line-height: 80px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.nav #brand a {
+  color: #fff;
+  font-family: "Montserrat";
+  transition: all 500ms ease-out;
+}
+
+.nav #brand a:hover {
   text-decoration: none;
+  color: #818181;
+  transition: all 500ms ease-out;
+}
+
+.nav #menu {
+  float: left;
+  right: 40px;
+  position: fixed;
+}
+
+.nav #menu li {
+  padding-left: 40px;
+  display: inline-block;
+  font-weight: lighter !important;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 80px;
+  position: relative;
+  transition: all 500ms ease-out;
+}
+
+.nav #menu li a {
+  color: #fff;
+  transition: all 500ms ease-out;
+}
+
+.nav #menu li a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #818181;
+  color: #818181;
+  transition: all 500ms ease-out;
+}
+
+#toggle {
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 2px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  float: right;
+  transition: all 500ms ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.close-btn {
+
+  position: absolute;
+  right: 30px;
+  font-weight: 300;
   color: #fff;
   text-transform: uppercase;
-  font-family: "Montserrat";
-  font-size: 20px;
-  font-weight: lighter;
-  padding: 16px 40px;
-  transition: .5s;
+  letter-spacing: 2px;
+  z-index: 2;
+  top: -2px;
+  line-height: 80px;
 }
 
-nav a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid rgb(189, 189, 189);
-    color: rgb(189, 189, 189);
+#resize {
+  z-index: 2;
+  top: 0px;
+  position:fixed;
+  background: #1f1f1f;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 500ms ease-out;
 }
 
-.logo {
+#resize #menu {
+  height: 90px;
   position: absolute;
-  top: 33%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 45%;
+  transform: translateX(-40%);
+  text-align: center;
+  display: table-cell;
+  vertical-align: center;
 }
 
-img {
-  width: 700px;
-  background: none;
+#resize #menu li {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 50px;
+  text-transform: uppercase;
+  min-height: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
 }
+
+#resize li:nth-child(1) {
+  margin-top: 140px;
+}
+
+#resize #menu li a {
+  color: #d3ae87;
+}
+
+#resize #menu li a:hover {
+  text-decoration: none;
+}
+
+#resize.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  #toggle {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 6px;
+    margin-right: 4px;
+  }
+
+  nav #brand {
+    margin-left: 10px;
+  }
+
+  #resize ul li a {
+    font-size: 15px;
+    font-family: "Poppins" !important;
+    font-weight: lighter !important;
+    color: rgb(156, 156, 156) !important;
+    transition: all 500ms ease-out;
+  }
+
+  nav #menu {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  #resize {
+    visibility: hidden !important;
+  }
+}
+
+/* navbar ends here */
 
 .header {
   position: absolute;
